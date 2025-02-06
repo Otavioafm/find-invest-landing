@@ -1914,3 +1914,46 @@ body {
 .secondary-button.startup-button:hover {
     background-color: var(--accent-green-dark);
 }
+
+/* Footer para páginas de termos e privacidade */
+.terms-page .footer-content,
+.privacy-page .footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+
+.terms-page .footer-logo,
+.privacy-page .footer-logo {
+    margin-bottom: 1rem;
+}
+
+.terms-page .footer-links,
+.privacy-page .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media (max-width: 575px) {
+    .terms-page .footer-links,
+    .privacy-page .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .terms-page .footer-logo,
+    .privacy-page .footer-logo {
+        text-align: center;
+    }
+
+    .terms-page .footer-logo p,
+    .privacy-page .footer-logo p {
+        font-size: 0.9rem;
+        color: var(--gray-300);
+        margin-top: 0.5rem;
+    }
+}
