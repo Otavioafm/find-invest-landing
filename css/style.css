@@ -45,6 +45,7 @@ body {
 }
 
 .nav-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -227,6 +228,10 @@ body {
     background: none;
     border: none;
     padding: 0.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .hamburger span {
