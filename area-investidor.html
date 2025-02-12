@@ -2,10 +2,11 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit-no">
     <title>Área do Investidor - Find Invest</title>
     <link rel="icon" type="image/png" href="img/LOGO-BRANCO-G.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/investor-hub.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -35,33 +36,85 @@
     <section class="page-header">
         <div class="container">
             <h1>Área do Investidor</h1>
-            <p>Acompanhe suas oportunidades e gerencie seus investimentos</p>
         </div>
     </section>
 
-    <!-- Coming Soon Section -->
-    <section class="coming-soon-page">
-        <div class="coming-soon-content">
-            <i class="fas fa-tools coming-soon-icon"></i>
-            <h1>Em Desenvolvimento</h1>
-            <p class="lead-text">Estamos trabalhando para trazer a melhor experiência para nossos investidores. Em breve, você terá acesso a uma plataforma completa para gerenciar seus investimentos.</p>
-            
-            <div class="whatsapp-invite">
-                <h2>Quer ser um dos primeiros?</h2>
-                <p>Entre para nossa lista VIP e receba:</p>
-                <ul>
-                    <li><i class="fas fa-check"></i> Acesso antecipado à plataforma</li>
-                    <li><i class="fas fa-check"></i> Oportunidades exclusivas de investimento</li>
-                    <li><i class="fas fa-check"></i> Conteúdo educacional premium</li>
-                    <li><i class="fas fa-check"></i> Suporte personalizado</li>
-                </ul>
-                <a href="https://wa.me/5511999999999" class="whatsapp-button">
-                    <i class="fab fa-whatsapp"></i>
-                    Entrar para Lista VIP
-                </a>
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <select id="filter-select">
+                <option value="all">Todas as Áreas</option>
+                <option value="CleanTech">CleanTech</option>
+                <option value="IoT">IoT</option>
+                <option value="Sustentabilidade">Sustentabilidade</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <input type="text" id="search-input" placeholder="Pesquisar startups...">
+        </div>
+    </section>
+
+    <!-- Startups Grid Section -->
+    <section class="startups-grid-section">
+        <div class="container">
+            <div class="startups-grid" id="startups-grid">
+                <!-- Card da Startup -->
+                <div class="investor-card" data-tags="CleanTech IoT Sustentabilidade">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623" alt="EcoTech Background">
+                    </div>
+                    <div class="card-body">
+                        <div class="logo-container">
+                            <img src="https://via.placeholder.com/100" alt="EcoTech Logo">
+                        </div>
+                        <h2>EcoTech Solutions</h2>
+                        <p>Soluções sustentáveis para cidades inteligentes</p>
+                        <div class="tags">
+                            <span class="tag">CleanTech</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Sustentabilidade</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="startup-profile.html" class="details-button">Ver Detalhes</a>
+                    </div>
+                </div>
+    
+                <!-- Adicione mais cards de startups conforme necessário -->
+                <div class="investor-card" data-tags="Tech Inovação">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623" alt="Startup Background">
+                    </div>
+                    <div class="card-body">
+                        <div class="logo-container">
+                            <img src="https://via.placeholder.com/100" alt="Startup Logo">
+                        </div>
+                        <h2>Startup XYZ</h2>
+                        <p>Descrição da Startup XYZ</p>
+                        <div class="tags">
+                            <span class="tag">Tech</span>
+                            <span class="tag">Inovação</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="details-button">Ver Detalhes</span> <!-- Removendo o link -->
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Popup de Login/Cadastro -->
+    <div id="auth-popup" class="auth-popup">
+        <button class="close-popup" onclick="window.location.href='index.html'">&times;</button>
+        <div class="auth-popup-content">
+            <i class="fas fa-lock fa-3x"></i>
+            <h2>Área Restrita</h2>
+            <p>Faça login para acessar as oportunidades de investimento.</p>
+            <div class="auth-buttons">
+                <button class="primary-button" onclick="window.location.href='hubCadastro.html'">Entrar</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -86,7 +139,7 @@
                     </div>
                     <div class="link-column">
                         <h4>Contato</h4>
-                        <a href="mailto:contato@findinvest.com.br">contatofindinvest@gmail.com</a>
+                        <a href="mailto:contatofindinvest@gmail.com">contatofindinvest@gmail.com</a>
                     </div>
                 </div>
             </div>
@@ -100,5 +153,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/auth-popup.js"></script>
 </body>
 </html>
