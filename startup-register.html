@@ -16,7 +16,7 @@
             <h1>Cadastro de Startup</h1>
             <p class="subtitle">Comece sua jornada de crescimento</p>
 
-            <form class="auth-form">
+            <form class="auth-form" onsubmit="event.preventDefault(); login();">
                 <div class="form-group">
                     <label for="startup-name">Nome da Startup</label>
                     <input type="text" id="startup-name" required>
@@ -57,5 +57,6 @@
             </p>
         </div>
     </div>
+    <script src="js/auth-popup.js"></script>
 </body>
 </html>

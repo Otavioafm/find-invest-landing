@@ -16,7 +16,7 @@
             <h1>Cadastro de Investidor</h1>
             <p class="subtitle">Descubra oportunidades únicas de investimento</p>
 
-            <form class="auth-form">
+            <form class="auth-form" onsubmit="event.preventDefault(); login();">
                 <div class="form-group">
                     <label for="investor-name">Nome Completo</label>
                     <input type="text" id="investor-name" required>
@@ -56,5 +56,6 @@
             </p>
         </div>
     </div>
+    <script src="js/auth-popup.js"></script>
 </body>
 </html>
